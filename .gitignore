@@ -27,3 +27,4 @@ yarn-error.log*
 /src/components/data.js
 /.vscode
 deploy
+push
