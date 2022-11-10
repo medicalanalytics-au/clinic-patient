@@ -1,0 +1,687 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+
+/* * Generic */
+
+.card {
+	background-color: white;
+	padding: 10px 10px;
+	border-radius: 5px;
+	border: 1px solid #afafaf;
+	box-shadow: 0px 4px 5.5px 0px rgba(0, 0, 0, 0.07);
+	margin-bottom: 10px;
+  }
+
+.cardnumber {
+	width: 60%;
+}
+
+.cardinfo {
+	width: 20%;
+}
+
+.cardexpiry {
+	margin-right: 10px;
+}
+
+  
+body {
+	overflow-x: hidden; /* Hide scrollbars */
+	font-family: "Quicksand", sans-serif;
+	color: #0a6e8a;
+}
+
+.App {
+	height: 100vh;
+	width: 100vw;
+	position: relative;
+	display: flex;
+
+	background-image: url("./images/background.jpeg");
+	background-position: left center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.glass {
+	background: rgba(255, 255, 255, 0.25);
+	box-shadow: 0 8px 32px 0 rgba(10, 110, 138, 0.37);
+	backdrop-filter: blur(4px);
+	border-radius: 10px;
+	border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.h4Bold {
+	font-weight: bold;
+}
+
+.sweetalert {
+	z-index: 100000000 !important;
+}
+
+.main {
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.bottomNavigator {
+	border: 1px solid silver;
+	display: flex;
+	justify-content: center;
+	position: fixed;
+	box-shadow: 1px 1px 5px 2px silver;
+	z-index: 5;
+}
+
+.dashboardInnerContainer {
+	background-color: white;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	box-shadow: 1px 1px 4px 4px silver;
+	height: 100%;
+	width: 100%;
+	color: black;
+
+	font-size: 15px;
+	height: 100%;
+	width: 100%;
+}
+
+.dashboxIcon {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color: black;
+	border-radius: 10px;
+	width: 50px;
+	height: 50px;
+	font-size: 20px;
+}
+
+.dashboxButtonText {
+	font-size: 10px;
+}
+
+.dashboardEmailDisplay {
+	bottom: 80px;
+	left: 20px;
+	position: absolute;
+}
+
+.appointmentTableContainer {
+	margin-bottom: 50px;
+	font-size: 10px;
+}
+
+.appointmentTableFont {
+	font-size: 10px;
+}
+
+.dashboardModal {
+	height: 100%;
+	width: 100%;
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+}
+
+.ModalScreen {
+	height: 100%;
+	width: 100%;
+	border-radius: 5px;
+	padding-bottom: 10px;
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	box-shadow: inset 2px 2px 15px rgba(10, 110, 138, 0.37);
+}
+
+.appointmentListTable {
+	height: 80%;
+	margin-bottom: 20px;
+}
+
+.appointmentDetailsPendingPaymentButton {
+	cursor: pointer;
+}
+
+.appointmentDetailsPendingPaymentButton:hover {
+	box-shadow: inset 0px 0px 4px 2px rgb(254, 195, 77);
+}
+
+.appointmentDetailsPendingPaymentButton:active {
+	box-shadow: inset 0px 0px 10px 2px rgb(254, 195, 77);
+}
+
+.pendingpaymentStatusButton:hover {
+	cursor: pointer;
+	box-shadow: inset 0px 0px 4px 2px rgb(254, 195, 77);
+}
+
+.pendingpaymentStatusButton:active {
+	cursor: pointer;
+	box-shadow: inset 0px 0px 4px 4px rgb(254, 195, 77);
+}
+
+.personalInfoFullTextWidth {
+	width: 60%;
+	margin-bottom: 10px;
+}
+
+.personalInfoShortTextWidth {
+	width: 30%;
+	margin-bottom: 10px;
+}
+
+/* * Media Queries for different screens */
+
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width: 321px) {
+	.bottomNavigator {
+		width: 100%;
+		bottom: 0px;
+	}
+
+	.welcomeTitle {
+		position: absolute;
+		top: 20px;
+		left: 20px;
+		height: 20%;
+		font-size: 150%;
+		font-weight: bold;
+	}
+
+	.loginBox {
+		position: absolute;
+		bottom: 20px;
+		right: 50px;
+		width: 40%;
+		height: 90vh;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+
+		border-radius: 10px;
+		background-color: #f4f3ef;
+		box-shadow: 1px 1px 10px 1px silver;
+	}
+
+	.loginInnerBox {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		height: 60%;
+		justify-content: center;
+		align-items: center;
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+
+	.header {
+		display: none;
+	}
+
+	.captions {
+		display: flex;
+	}
+
+	.captionBox {
+		display: flex;
+		flex-direction: row;
+		left: 0%;
+		padding-left: 5px;
+		position: absolute;
+		z-index: 3;
+		width: 50%;
+	}
+
+	.captionBox1 {
+		top: 100px;
+	}
+
+	.captionBox2 {
+		top: 200px;
+	}
+
+	.captionImage {
+		height: 50px;
+		width: 50px;
+		align-self: center;
+		box-shadow: 1px 1px 3px 2px silver;
+		border-radius: 25px;
+		object-fit: cover;
+		object-position: 2px 2px;
+	}
+
+	.captionImage1 {
+		margin-left: 10px;
+	}
+
+	.captionImage2 {
+		margin-right: 10px;
+	}
+
+	.captionText {
+		display: flex;
+		flex-direction: column;
+		/* width: 30%; */
+	}
+
+	.captionText1 {
+		margin-left: 10px;
+	}
+
+	.captionText2 {
+		margin-left: 50px;
+		margin-right: 20px;
+	}
+
+	h4 {
+		margin-top: 0.5em;
+		font-size: 12px;
+	}
+
+	.h4Bold {
+		font-size: 14px;
+	}
+	.h4Normal {
+		margin-top: 0em;
+		font-weight: normal;
+		font-size: 14px;
+	}
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width: 428px) {
+	.welcomeTitle {
+		top: 40px;
+	}
+	.dentistbackgroundimage {
+		display: none;
+	}
+	.loginBox {
+		width: 80%;
+		height: 50vh;
+		right: auto;
+	}
+
+	.loginInnerBox {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		height: 60%;
+		justify-content: center;
+		align-items: center;
+		padding-bottom: 10px;
+	}
+
+	.header {
+		display: none;
+	}
+	.captions {
+		display: flex;
+	}
+
+	.captionBox {
+		display: flex;
+		flex-direction: row;
+		left: 0%;
+		padding-left: 5px;
+		position: absolute;
+		z-index: 3;
+		width: auto;
+		padding-right: 20px;
+	}
+
+	.captionBox1 {
+		top: 100px;
+	}
+
+	.captionBox2 {
+		top: 200px;
+	}
+
+	.captionImage {
+		height: 50px;
+		width: 50px;
+		align-self: center;
+		box-shadow: 1px 1px 3px 2px silver;
+		border-radius: 25px;
+		object-fit: cover;
+		object-position: 2px 2px;
+	}
+
+	.captionImage1 {
+		margin-left: 10px;
+	}
+
+	.captionImage2 {
+		margin-right: 10px;
+	}
+
+	.captionText {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.captionText1 {
+		margin-left: 10px;
+	}
+
+	.captionText2 {
+		margin-left: 50px;
+		margin-right: 20px;
+	}
+
+	h4 {
+		margin-top: 0.5em;
+		font-size: 12px;
+	}
+
+	.h4Bold {
+		font-size: 14px;
+	}
+	.h4Normal {
+		margin-top: 0em;
+		font-weight: normal;
+		font-size: 14px;
+	}
+
+	.appointmentTableContainer {
+		width: 100%;
+		margin-bottom: 50px;
+		font-size: 10px;
+	}
+
+	.appointmentTableFont {
+		font-size: 10px;
+	}
+	.personalInfoFullTextWidth {
+		width: 100%;
+		margin-bottom: 10px;
+	}
+	
+	.personalInfoShortTextWidth {
+		width: 70%;
+		margin-bottom: 10px;
+	}
+}
+
+/* Surface Duo (portrait) ----------- */
+@media only screen and (min-width: 429px) and (max-width: 540px) {
+	.captionBox {
+		display: flex;
+		flex-direction: row;
+		left: 0%;
+		padding-left: 5px;
+		position: absolute;
+		z-index: 3;
+		width: auto;
+		padding-right: 20px;
+	}
+
+	.loginBox {
+		width: 60%;
+		height: 50vh;
+		top: 350px;
+		right: 10px;
+	}
+}
+
+/* iPads (landscape) ----------- */
+@media only screen and (min-width: 915px) and (max-width: 1180px) and (orientation: landscape) {
+	.captionImage {
+		height: 150px;
+		width: auto;
+		box-shadow: 1px 1px 3px 2px silver;
+		border-radius: 5px;
+	}
+	.captionBox1 {
+		top: 200px;
+	}
+
+	.captionBox2 {
+		top: 400px;
+	}
+
+	.dentistbackgroundimage {
+		position: absolute;
+		top: 100px;
+		left: 50px;
+		height: 600px;
+		width: 50%;
+		opacity: 0.3;
+		z-index: 1;
+		background-image: url("./images/dentist.png");
+		background-position: left center;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+
+	.appointmentTableContainer {
+		font-size: 12px;
+	}
+
+	.appointmentTableFont {
+		font-size: 12px;
+	}
+}
+
+/* iPads (portrait) ----------- */
+@media only screen and (min-width: 768px) and (max-width: 1180px) and (orientation: portrait) {
+	.captionBox {
+		display: flex;
+		flex-direction: row;
+		left: 5%;
+		padding-left: 5px;
+		position: absolute;
+		z-index: 3;
+		width: auto;
+		padding-right: 20px;
+	}
+
+	.captionImage {
+		height: 110px;
+		width: auto;
+		box-shadow: 1px 1px 3px 2px silver;
+		border-radius: 5px;
+	}
+	.captionBox1 {
+		top: 100px;
+	}
+
+	.captionBox2 {
+		top: 250px;
+	}
+
+	.dentistbackgroundimage {
+		position: absolute;
+		top: 100px;
+		left: 50px;
+		height: 800px;
+		width: 90%;
+		opacity: 0.3;
+		z-index: 1;
+		background-image: url("./images/dentist.png");
+		background-position: left center;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+	.loginBox {
+		width: 60%;
+		height: 50vh;
+		bottom: 50px;
+		left: 50px;
+		z-index: 3;
+	}
+}
+
+/* Desktops and laptops ----------- */
+@media only screen and (min-width: 1224px) {
+	.bottomNavigator {
+		width: 50%;
+		bottom: 10px;
+	}
+
+	.dentistbackgroundimage {
+		position: absolute;
+		top: 100px;
+		left: 100px;
+		height: 800px;
+		width: 80%;
+		opacity: 0.3;
+		z-index: 1;
+		background-image: url("./images/dentist.png");
+		background-position: left center;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+
+	.loginBox {
+		position: fixed;
+		right: 10%;
+		top: 30%;
+		width: 20%;
+		height: 60%;
+		border-radius: 10px;
+		background-color: #f4f3ef;
+		box-shadow: 1px 1px 10px 1px silver;
+
+		/* * required for alignment of inner box */
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		z-index: 4;
+	}
+
+	.loginInnerBox {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		height: 60%;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.welcomeTitle {
+		width: 100%;
+		position: absolute;
+		top: 10%;
+		left: 10%;
+		height: 20%;
+		font-size: 300%;
+		font-weight: bold;
+	}
+
+	.header {
+		top: 0px;
+		left: 0px;
+		right: 0px;
+		height: 50px;
+		background-color: #0a6e8a;
+		position: fixed;
+		z-index: 2;
+		color: #fdfdfd;
+		display: flex;
+		align-items: center;
+	}
+
+	.captions {
+		display: flex;
+	}
+
+	.captionBox {
+		display: flex;
+		flex-direction: row;
+		left: 10%;
+		position: absolute;
+		z-index: 3;
+		width: auto;
+	}
+
+	.captionBox1 {
+		top: 25%;
+	}
+
+	.captionBox2 {
+		top: 60%;
+	}
+
+	.captionImage {
+		height: 200px;
+		width: auto;
+		box-shadow: 1px 1px 3px 2px silver;
+		border-radius: 5px;
+	}
+
+	.captionText {
+		display: flex;
+		flex-direction: column;
+		width: 30%;
+	}
+
+	.captionText1 {
+		margin-left: 20px;
+	}
+
+	.captionText2 {
+		margin-left: 200px;
+		margin-right: 20px;
+	}
+
+	h4 {
+		font-size: 1.5rem;
+	}
+		
+	.h4Normal {
+		font-size: 1rem;
+		margin-top: 0.3em;
+		font-weight: normal;
+	}
+
+	.dashboardInnerContainer {
+		height: 95%;
+		width: 95%;
+	}
+
+	.appointmentTableContainer {
+		width: 800;
+		margin-bottom: 50px;
+	}
+
+	.dashboxIcon {
+		width: 150px;
+		height: 150px;
+		font-size: 40px;
+	}
+
+	.dashboardEmailDisplay {
+		left: 80px;
+	}
+
+	.dashboardModal {
+		height: 90%;
+		width: 80%;
+	}
+
+	.dashboardModalSmall {
+		height: 90%;
+		width: 50%;
+	}
+
+	.ModalScreen {
+		height: 60%;
+		width: 60%;
+		overflow: hidden;
+	}
+}
+
+/* Large screens ----------- */
+@media only screen and (min-width: 1824px) {
+}

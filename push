@@ -1,0 +1,25 @@
+green=$(tput setaf 2)
+normal=$(tput sgr0)
+printf "\n${green}Upload build now? <yes/no>"
+
+read -r  backupresponse
+
+if [ $backupresponse == "yes" ];
+then 
+  printf "${green}Enter remote server password: "
+  read -s password
+
+  printf "\nCommitting to Github\n\n"
+  git add .
+  git commit -m "Nightly Commit"
+  git push &
+
+  eval "export SSHPASS='""$password""'"
+
+  npm run build 
+  printf "\nUploading build folder to remote server\n\n"
+  sshpass -e rsync -r -v -e ssh ./build zul@medicalanalytics.org:~/dental/react/
+  printf "${normal}"
+else 
+  echo Backup cancelled. Enter '"yes"' without quotes to run backup utility
+fi
