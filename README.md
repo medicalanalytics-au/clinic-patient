@@ -30,4 +30,5 @@ Communication between client to host utilises a XHR fetch() for CRUD operations,
 Video handshakes are conducted through a PeerJs module, which negotiates ICE candidates with a COTURN turnserver. Video transmission is conducted 
 through a WebRTC module.
 
+Emails are sent through a commercial package called Twilio SendGrid
 
